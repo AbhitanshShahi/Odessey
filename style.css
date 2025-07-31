@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Lancelot&family=Lateef:wght@200;300;400;500;600;700;800&family=Ledger&display=swap");
+body {
+  height: 100vh;
+  background: url("https://www.transparenttextures.com/patterns/stardust.png"), #12121e;
+  color: white;
+  font-family: "Lateef", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 12px;
+  margin: 0 10px;
+}
+.Rank {
+  color: gold;
+}
+.XP-bar{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.experience {
+  display: block;
+  width: 100px;             
+  height: 20px;            
+  background-color: #444;  
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.experience-bar {
+  display: block;
+  height: 100%;
+  width: 0%;               
+  background-color: #00ff95;
+  transition: width 0.4s ease-in-out;
+}
+.container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.display {
+  padding: 0 70px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 180px;
+  background-color: #1e1e2f;
+  color: #a0a0b0;
+}
+.question {
+  font-family: "Lancelot", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.quest_daily {
+  width: 710px;
+  height: 54px;
+  border-radius: 13px;
+  border: 0;
+  padding-left: 10px;
+  font-family: "Lancelot", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+}
+.submit-btn {
+  height: 56px;
+  width: 139px;
+  border-radius: 13px;
+  background-color: #bb86fc;
+  border: 0;
+  font-family: "Lateef", serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+  cursor: pointer;
+  transition: ease-in-out 0.18s;
+  outline: none;
+}
+.submit-btn:hover{
+  transform: scale(1.05);
+  background-color: #9664d3;
+}
+.forms{
+  margin: 19px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.tasks-to-be-done{
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  width: 100%;
+}
+.taskItem{
+  width: 690px;
+  height: 50px;
+  background-color: #1E1E2F;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 20px;
+
+}
+.complete-btn-css{
+  background-color: #03DAC6;
+  height: 48px;
+  width: 129px;
+  border: 0;
+  border-radius: 13px;
+  transition: ease-in-out 0.18s;
+  outline: none;
+  cursor: pointer;
+}
+.complete-btn-css:hover{
+  background-color: #0fa192;
+  transform: scale(1.05);
+}
+.Quest-to-do{
+  padding-left: 15px;
+  padding-top: 5px;
+  transition: all 0.18s ease-in ;
+  font-family: 'Times New Roman', Times, serif;
+}
+.task-actions{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.material-symbols-outlined{
+  font-size: 35px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: red;
+}
+.material-symbols-outlined:hover{
+  transform: scale(1.2);
+  color: rgb(193, 7, 7);
+}
+@media screen and (max-width: 600px) {
+  body {
+    font-size: large;
+  }
+
+  .display {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .quest_daily {
+    width: 100%;
+    font-size: medium;
+  }
+
+  .submit-btn {
+    font-size: 22px;
+    height: 48px;
+  }
+
+  .taskItem {
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .task-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
+
+  .complete-btn-css {
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .material-symbols-outlined {
+    font-size: 30px;
+  }
+}
+.rules-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 20px;
+  background-color: #ffffff10;
+  color: #fff;
+  border: 1px solid #fff3;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+.rules-button:hover {
+  background-color: #ffffff20;
+}
+
+
+.rules-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.rules-modal.hidden {
+  display: none;
+}
+
+.rules-content {
+  background-color: #1e1e2e;
+  color: white;
+  padding: 30px;
+  border-radius: 16px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 0 15px #00000060;
+  animation: popup 0.3s ease-in-out;
+}
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.delete-btn-css {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-size: 16px;
+}
+
+.delete-btn-css i {
+  pointer-events: none;
+  font-size: 18px;
+}
+
+.delete-btn-css:hover {
+  background-color: #e03c3c;
+  transform: scale(1.05);
+}
+
+.delete-btn-css:active {
+  transform: scale(0.95);
+}

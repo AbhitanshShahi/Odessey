@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odessey</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete"/>
+<body>
+    <nav>
+        <h1>Odessey</h1>
+    </nav>
+    <div class="container">
+        <div class="display">
+            <p>My Rank: <span class="Rank"></span></p>
+            <p class="XP-bar">XP: <span class="experience"><span class="experience-bar"></span></span></p>
+            <p>Streak: <span class="days"></span></p>
+        </div>
+        <p class="question">Alright, if you get one big win today, what's it going to be?</p>
+        <form>
+            <div class="form-submit">
+            <input id="task-input" type="text" placeholder="Add Your Daily Quest...." class="quest_daily">
+            <button id="task-btn" type="submit" class="submit-btn">Add Quest</button>
+            </div>
+            <ul id="task-list" class="tasks-to-be-done"></ul>
+        </form>
+    </div>
+<button id="rules-btn" class="rules-button">Rules</button>
+
+<div id="rules-modal" class="rules-modal hidden">
+    <div class="rules-content">
+        <span id="close-btn" class="close-btn">❌</span>
+        <h2>How to Use This To-Do List</h2>
+        <ul>
+            <li>There is no Delete Button...DON'T BE A PUSSY</li>
+            <li>Make quests that you will complete today and try to complete the quests everyday.</li>
+            <li>XP increases with each quest completed.</li>
+            <li>Maintain your streak by completing at least one task daily.</li>
+            <li>Your Rank increases with increase in XP so try to get the highest rank everyday!</li>
+        </ul>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
