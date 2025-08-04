@@ -1,11 +1,4 @@
 let tasks = [];
-const RANKS = [
-  { name: "Novice", xpThreshold: 0 },
-  { name: "Apprentice", xpThreshold: 2 },
-  { name: "Warrior", xpThreshold: 5 },
-  { name: "Champion", xpThreshold: 8 },
-  { name: "Legend", xpThreshold: 10 },
-];
 document.addEventListener("DOMContentLoaded", function () {
   const stored = JSON.parse(localStorage.getItem("tasks"));
   if (stored) {
